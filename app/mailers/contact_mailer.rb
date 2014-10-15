@@ -5,4 +5,9 @@ class ContactMailer < ActionMailer::Base
     @contact = contact
     mail(:to => "railsforce@hotmail.com", :subject => "RailsForce: New quote request")
   end
+
+  def send_confirmation(contact)
+    @contact = contact
+    mail(:to => @contact.email, :subject => "RailsForce: Quote request received")
+  end
 end
