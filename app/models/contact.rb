@@ -4,6 +4,6 @@ class Contact < ActiveRecord::Base
 
   def send_get_quote_email
     ContactMailer.get_quote(self).deliver
-    ContactMailer.send_confirmation(self).deliver
+    #ContactMailer.send_confirmation(self).deliver
   end
 end
