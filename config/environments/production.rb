@@ -85,8 +85,8 @@ Rails.application.configure do
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "railsforce.herokuapp.com",
-      :user_name            => "techrails@gmail.com",
-      :password             => "shahzadee307094g",
+      :user_name            => ENV["mail_account_id"],
+      :password             => ENV["mail_account_pw"],
       :authentication       => "plain",
       :enable_starttls_auto => true
   }
